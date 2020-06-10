@@ -1,0 +1,407 @@
+<ion-content>
+  <ion-slides [options]="slideOpts" (ionSlideTransitionEnd)="slideChange()" #slides>
+    <ion-slide id="slide0">
+      <ion-img [src]="'../../assets/img/1_IoT_Intro.gif'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide1">
+      <ion-img [src]="'../../assets/img/2_IoT_Exposition.gif'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide2">
+      <ion-img [src]="'../../assets/img/3_IoT_Mission.gif'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide3_0">
+      <div>
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 480 270"
+        >
+          <image
+            width="480"
+            height="270"
+            xlink:href="../../assets/img/4_IoT_Assessment.gif"
+          ></image>
+          <a (click)="onWrong()">
+            <rect
+              x="214"
+              y="105"
+              fill="#fff"
+              opacity="0"
+              width="256"
+              height="35"
+            ></rect>
+          </a>
+          <a (click)="onWrong()">
+            <rect
+              x="214"
+              y="148"
+              fill="#fff"
+              opacity="0"
+              width="256"
+              height="35"
+            ></rect>
+          </a>
+          <a (click)="onCorrect()">
+            <rect
+              x="214"
+              y="193"
+              fill="#fff"
+              opacity="0"
+              width="256"
+              height="32"
+            ></rect>
+          </a>
+          <a (click)="onWrong()">
+            <rect
+              x="214"
+              y="233"
+              fill="#fff"
+              opacity="0"
+              width="256"
+              height="32"
+            ></rect>
+          </a>
+        </svg>
+      </div>
+    </ion-slide>
+
+    <ion-slide id="slide4_1">
+      <div>
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 480 270"
+        >
+          <image
+            width="480"
+            height="270"
+            xlink:href="../../assets/img/4_IoT_Correct.gif"
+          ></image>
+          <a (click)="onSkipIntro()">
+            <rect
+              x="352"
+              y="132"
+              fill="#fff"
+              opacity="0"
+              width="115"
+              height="41"
+            ></rect>
+          </a>
+          <a (click)="onIntro()">
+            <rect
+              x="352"
+              y="209"
+              fill="#fff"
+              opacity="0"
+              width="115"
+              height="41"
+            ></rect>
+          </a>
+        </svg>
+      </div>
+    </ion-slide>
+    <ion-slide id="slide5_2">
+      <div>
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 480 270"
+        >
+          <image
+            width="480"
+            height="270"
+            xlink:href="../../assets/img/4_IoT_Wrong.gif"
+          ></image>
+          <a (click)="onIntro()">
+            <rect
+              x="335"
+              y="187"
+              fill="#fff"
+              opacity="0"
+              width="133"
+              height="59"
+            ></rect>
+          </a>
+        </svg>
+      </div>
+    </ion-slide>
+
+    <ion-slide id="slide6_3">
+      <ion-img [src]="'../../assets/img/5_IoT_101.gif'" ></ion-img>
+    </ion-slide>
+    <ion-slide id="slide7_4">
+      <ion-img [src]="'../../assets/img/5_IoT_101_2.gif'" ></ion-img>
+    </ion-slide>
+    <ion-slide id="slide8_0">
+      <ion-img [src]="'../../assets/img/6_IoT_Design.gif'" ></ion-img>
+    </ion-slide>
+    <ion-slide id="slide9_1">
+        <div>
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 480 270"
+          >
+            <image
+              width="480"
+              height="270"
+              xlink:href="../../assets/img/6_IoT_Design_2.gif"
+            ></image>
+            <a (click)="onInfo('camera')">
+              <rect
+                x="313"
+                y="30"
+                fill="#fff"
+                opacity="0"
+                width="35"
+                height="50"
+              ></rect>
+            </a>
+            <a (click)="onInfo('micro')">
+              <rect
+                x="362"
+                y="21"
+                fill="#fff"
+                opacity="0"
+                width="79"
+                height="77"
+              ></rect>
+            </a>
+          </svg>
+        </div>
+    </ion-slide>
+
+    <ion-slide id="slide10_2">
+      <ion-img [src]="'../../assets/img/7_IoT_Design.gif'" ></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide11_3">
+      <ion-img [src]="'../../assets/img/8_IoT_Micro.gif'" ></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide12_4">
+      <ion-img [src]="'../../assets/img/9_IoT_System.gif'" ></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide13_0">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card>
+              <ion-card-content>
+                <ion-list>
+                  <ion-item *ngFor="let choice of choices">
+                    <ion-label>{{choice.val}}</ion-label>
+                    <ion-checkbox slot="start" [(ngModel)]="choice.isChecked"></ion-checkbox>
+                  </ion-item>
+                </ion-list>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-fab horizontal="end" vertical="center" slot="fixed">
+        <ion-fab-button (click)="onMicroAss()" color="light" class="animated bounce infinite">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-slide>
+
+    <ion-slide id="slide14_1">
+      <ion-img [src]="'../../assets/img/10_IoT_Asses_Micro_Incorrect1.gif'" ></ion-img>
+    </ion-slide>
+    <ion-slide id="slide15_2">
+      <ion-img [src]="'../../assets/img/10_IoT_Asses_Micro_Incorrect2.gif'" ></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide16_3">
+      <ion-img [src]="'../../assets/img/11_IoT_Assess_Micro_Correct.gif'" ></ion-img>
+    </ion-slide>
+    <ion-slide id="slide17_0">
+      <ion-img [src]="'../../assets/img/12_IoT_Beacons.gif'" ></ion-img>
+    </ion-slide>
+    <ion-slide id="slide18_1">
+      <ion-img [src]="'../../assets/img/13_IoT_Decision_Intro.gif'" ></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide19_2">
+      <ion-img [src]="'../../assets/img/14_IoT_Decision_Screen.gif'" ></ion-img>
+      <ion-fab horizontal="end" vertical="top" slot="fixed">
+        <ion-fab-button (click)="onDeviceInfo()" color="light" class="animated bounce infinite">
+          <ion-icon name="information-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-slide>
+
+    <ion-slide id="slide20_3">
+      <div>
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 480 270"
+        >
+          <image
+            width="480"
+            height="270"
+            xlink:href="../../assets/img/14_IoT_Decision_Screen_Icon.gif"
+          ></image>
+          <a (click)="onAddItem('estimote_beacon')">
+            <rect
+              x="6"
+              y="139"
+              fill="#fff"
+              opacity="0"
+              width="36"
+              height="26"
+            ></rect>
+          </a>
+          <a (click)="onAddItem('bluecharm_beacon')">
+            <rect
+              x="45"
+              y="204"
+              fill="#fff"
+              opacity="0"
+              width="42"
+              height="27"
+            ></rect>
+          </a>
+          <a (click)="onAddItem('mokosmart_temp_beacon')">
+            <rect
+              x="137"
+              y="240"
+              fill="#fff"
+              opacity="0"
+              width="49"
+              height="28"
+            ></rect>
+          </a>
+          <a (click)="onAddItem('rpi3')">
+            <rect
+              x="224"
+              y="243"
+              fill="#fff"
+              opacity="0"
+              width="45"
+              height="25"
+            ></rect>
+          </a>
+          <a (click)="onAddItem('temp_humid_sensor')">
+            <rect
+              x="316"
+              y="235"
+              fill="#fff"
+              opacity="0"
+              width="43"
+              height="27"
+            ></rect>
+          </a>
+          <a (click)="onAddItem('rpi_lcd_display')">
+            <rect
+              x="393"
+              y="197"
+              fill="#fff"
+              opacity="0"
+              width="36"
+              height="25"
+            ></rect>
+          </a>
+          <a (click)="onAddItem('rpi_camera_module')">
+            <rect
+              x="429"
+              y="114"
+              fill="#fff"
+              opacity="0"
+              width="43"
+              height="27"
+            ></rect>
+          </a>
+          <a (click)="onInfo('estimote')">
+            <rect
+              x="24"
+              y="53"
+              fill="#fff"
+              opacity="0"
+              width="64"
+              height="64"
+            ></rect>
+          </a>
+          <a (click)="onInfo('bluecharm')">
+            <rect
+              x="73"
+              y="127"
+              fill="#fff"
+              opacity="0"
+              width="46"
+              height="47"
+            ></rect>
+          </a>
+          <a (click)="onInfo('mokosmart')">
+            <rect
+              x="139"
+              y="169"
+              fill="#fff"
+              opacity="0"
+              width="60"
+              height="41"
+            ></rect>
+          </a>
+          <a (click)="onInfo('rpi3')">
+            <rect
+              x="218"
+              y="185"
+              fill="#fff"
+              opacity="0"
+              width="62"
+              height="40"
+            ></rect>
+          </a>
+          <a (click)="onInfo('temphumid')">
+            <rect
+              x="295"
+              y="167"
+              fill="#fff"
+              opacity="0"
+              width="58"
+              height="42"
+            ></rect>
+          </a>
+          <a (click)="onInfo('rpilcd')">
+            <rect
+              x="359"
+              y="127"
+              fill="#fff"
+              opacity="0"
+              width="50"
+              height="34"
+            ></rect>
+          </a>
+          <a (click)="onInfo('rpicamera')">
+            <rect
+              x="371"
+              y="51"
+              fill="#fff"
+              opacity="0"
+              width="52"
+              height="50"
+            ></rect>
+          </a>
+        </svg>
+      </div>
+      <ion-fab horizontal="end" vertical="center" slot="fixed">
+        <ion-fab-button (click)="onFinalItemForward()" color="light" class="animated bounce infinite">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-slide>
+
+    <ion-slide id="slide21_4">
+      <ion-img [src]="'../../assets/img/15_IoT_End.gif'" ></ion-img>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

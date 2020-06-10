@@ -1,0 +1,32 @@
+.navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  }
+  
+  /* Style the navbar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+  }
+
+  .hide-nav {
+    // display: none; /* You can play on opacity for nice transitions*/
+    transition: top 0.3s;
+    background-color: red;
+  }
+//   .hide-nav2 {
+//     display; /* You can play on opacity for nice transitions*/
+//     transition: top 0.3s;
+//   }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }

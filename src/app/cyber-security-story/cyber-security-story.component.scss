@@ -1,0 +1,136 @@
+ion-img{
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    width: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.pc-decision {
+    border: 3px solid lightseagreen;
+    background-image: url('../../assets/img/Cybersecurity_2_bg.JPG');
+    background-size: cover;
+    // animation-iteration-count: 10;
+    ion-card {
+        opacity: 0.6;
+        ion-card-title{
+            opacity: 1;
+        }
+        ion-button {
+            --opacity: 1;
+            --border-color:black;
+            --color:black;
+            --border-width: 3px;
+            font-weight: bold;
+        }
+
+    }
+}
+
+ion-slides {
+    height: 100%;
+    width: 100%;
+    // display: flex;
+}
+.swiper-slide {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+// ion-slide {
+//     height: 100%;
+//     width: 100%;
+//     position: relative;
+//     display: inline-block;
+// }
+
+ion-card {
+    border: 2px solid lightseagreen;
+    margin-top: 5%;
+    animation-iteration-count: 5;
+
+    ion-card-title {
+        color: maroon;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    ion-card-subtitle{
+        color: maroon;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    p {
+        font-size: medium;
+        font-weight: bold;
+    }
+    color: black;
+    background: rgba($color: white, $alpha: 0.6);
+    height: 75%;
+}
+
+.learningscreens {
+    background-image: url('../../assets/img/Cybersecurity_4_bg.JPG');
+    font-weight: bold;
+    ion-card-content{
+        font-size: 1.25rem;
+    }
+
+}
+
+ion-toolbar {
+    --background: lightseagreen;
+}
+
+.trivia {
+    // border: 3px solid lightseagreen;
+    background-image: url('../../assets/img/Cybersecurity_2_bg.JPG');
+    background-size: cover;
+    // .card {
+    //     background: rgba(#ffffff, 0.6);
+    // }
+
+}
+
+.scene {
+    perspective: 600px;
+}
+
+.cardd {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+  }
+
+  .cardd.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+
+  .card__face {
+      backface-visibility: hidden;
+  }
+
+  .card__face--front, .card__face--back{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+  }
+  .card__face--front{
+    ion-card-header{
+        padding-top: 6.5%;
+    }
+  }
+  .card__face--back {
+    transform: rotateY(180deg);
+    background: white;
+    ion-card-header{
+        padding-top: 3.5%;
+    }
+  }
+
+  

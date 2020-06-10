@@ -1,0 +1,91 @@
+ion-thumbnail {
+    display: inline;
+    // border-style: solid;
+}
+
+// ion-col {
+//     border: 2px solid white;
+// }
+
+// #mycont {
+//     // --background: none;
+//     width: 100%;
+//     height: 100%;
+//     transform: rotateZ(0);
+//     -webkit-transform: rotateZ(0);
+//     background: url('../../../assets/img/testbackground.gif');
+//     background-size: cover;
+//     background-position: center center;
+//     background-repeat: no-repeat;
+// }
+ion-item {
+    --background : none;
+    background: inherit;
+    color: white;
+}
+
+ion-label {
+    --color: white;
+}
+.swiper-slide {
+    height: 100%;
+    width: 100%;
+}
+
+ion-input {
+    --background: inherit;
+}
+
+.medal {
+    height: auto;
+    width: auto;
+}
+
+ion-card {
+    text-align: center;
+    color: white;
+    background: inherit;
+    // border-color: red;
+    border: 2px solid black;
+    ion-card-title {
+        color: white;
+    }
+    float:50%;
+    // background-size: cover;
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+}
+
+ion-reorder{
+    text-align: center;
+}
+
+ion-slides {
+    height: 100%;
+    width: 100%;
+    // display: flex;
+}
+
+.achievement-container {
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .message {
+        color: lightseagreen;
+        font-weight: bold;
+    }
+    // img {
+    //     height: 20%;
+    //     width: 20%;
+    // }
+}

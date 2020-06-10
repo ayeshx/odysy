@@ -1,0 +1,214 @@
+
+@media (min-width:320px)  { 
+    /* smartphones, iPhone, portrait 480x320 phones */ 
+    ion-slides {
+        height: 100%;
+        background-color: white;
+        color: lightseagreen
+      }
+
+      ion-button{
+          --border-color:lightseagreen;
+          --color:lightseagreen;
+      }
+    
+      .slide{
+          padding-top: 100px;
+          display: block;
+      }
+
+      img{
+          width: 65%;
+      }
+    
+      h2 {
+        font-size: 2rem;
+      }
+    
+      p {
+        padding: 0 40px;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        color: black;
+      }
+
+}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+
+    ion-slides {
+        height: 100%;
+        background-color: black;
+        color: lightseagreen
+      }
+    
+      .slide{
+          padding-top: 100px;
+          display: block;
+      }
+    
+      h2 {
+        font-size: 2.5rem;
+      }
+    
+      p {
+        padding: 0 40px;
+        font-size: 1.75rem;
+        line-height: 1.5;
+        color: white;
+      }
+
+}
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+    ion-slides {
+        height: 100%;
+        background-color: white;
+        color: lightseagreen
+      }
+
+      ion-button{
+          --border-color:lightseagreen;
+          --color:lightseagreen;
+          --border-width: 2px;
+          --border-radius: 2rem;
+          font-size: 0.75rem;
+          height: 20px;
+      }
+    
+      .slide{
+          padding-top: 50px;
+          display: block;
+      }
+
+      img{
+          width: 20%;
+      }
+    
+      h2 {
+        font-size: 1.2rem;
+        font-weight: 1000;
+      }
+    
+      p {
+        padding-top: 10;
+        font-size: 0.65rem;
+        line-height: 0.75;
+        color: black;
+      }
+
+}
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+    ion-slides {
+        height: 100%;
+        background-color: white;
+        color: lightseagreen
+      }
+
+      ion-button{
+          --border-color:lightseagreen;
+          --color:lightseagreen;
+          --border-width: 3px;
+          --border-radius: 2rem;
+          font-size: 1.5rem;
+          height: 40px;
+      }
+    
+      .slide{
+          padding-top: 100px;
+          display: block;
+      }
+
+      img{
+          width: 26%;
+      }
+    
+      h2 {
+        font-size: 1.75rem;
+        font-weight: 1000;
+      }
+    
+      p {
+        padding: 0 40px;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: black;
+      }
+
+
+}
+@media only screen and  (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+    ion-slides {
+        height: 100%;
+        background-color: white;
+        color: lightseagreen
+      }
+
+      ion-button{
+          --border-color:lightseagreen;
+          --color:lightseagreen;
+          --border-width: 3px;
+          --border-radius: 2rem;
+          font-size: 1.5rem;
+          height: 40px;
+      }
+    
+      .slide{
+          padding-top: 100px;
+          display: block;
+      }
+
+      img{
+          width: 24%;
+          height: 24%
+      }
+    
+      h2 {
+        font-size: 1.75rem;
+        font-weight: 1000;
+      }
+    
+      p {
+        padding: 0 40px;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: black;
+      }
+
+
+}
+@media only screen and (min-width:1281px) { /* hi-res laptops and desktops */ 
+    ion-slides {
+        height: 100%;
+        background-color: white;
+        color: lightseagreen
+      }
+
+      ion-button{
+          --border-color:lightseagreen;
+          --color:lightseagreen;
+          --border-width: 3px;
+          --border-radius: 2rem;
+          font-size: 2.5rem;
+          height: 65px;
+      }
+    
+      .slide{
+          padding-top: 100px;
+          display: block;
+      }
+
+      img{
+          width: 35%;
+      }
+    
+      h2 {
+        font-size: 5rem;
+      }
+    
+      p {
+        padding: 0 40px;
+        font-size: 2rem;
+        line-height: 1.5;
+        color: red;
+      }
+
+}

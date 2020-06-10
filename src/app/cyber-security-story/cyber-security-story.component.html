@@ -1,0 +1,525 @@
+<ion-content fullscreen scroll-y="false">
+  <!-- <div style="width:100%; height:100%; display:block; background: url('../../assets/img/cybersecurity_3.JPG'); background-size: cover; opacity: 0; position: absolute;"  id="divtwo" #divtwo>
+    <h1>DivTwo</h1>
+  </div>
+
+  <div style="width:100%; height:100%; display: block; background: url('../../assets/img/cybersecurity_1.JPG'); background-size: cover; opacity: 1; position: absolute; "  id="divone" #divone>
+    <h1>DIVONE</h1>
+  </div> -->
+  
+  <ion-slides
+    (ionSlideTransitionEnd)="slideChange()"
+    #slide
+    [options]="slideOpts"
+  >
+    <ion-slide id="slide0">
+      <ion-img [src]="'../../assets/img/Cybersecurity_1.PNG'"></ion-img>
+      <!-- <div class="Cyber1"></div> -->
+    </ion-slide>
+
+    <ion-slide id="slide1">
+      <ion-img [src]="'../../assets/img/cybersecurity_1.JPG'"></ion-img>
+      <!-- <div class="Cyber2"></div> -->
+    </ion-slide>
+
+    <ion-slide id="slide2">
+      <ion-img [src]="'../../assets/img/cybersecurity_2.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide3" class="trivia">
+      <div class="card">
+        <ion-card class="animated swing delay-2s slow">
+          <ion-header>
+            <ion-toolbar>
+              <ion-card-title>Fun Fact!</ion-card-title>
+            </ion-toolbar>
+          </ion-header>
+
+          <ion-card-content>
+            <p>
+              Donald’s past as a hacker savant is based on the true story of
+              Mafiaboy, a 16 years old Canadian teenager who shut down Yahoo
+              Portal for 3 hours on Feb 6th, 2000. He proceeded to bring down
+              Buy.com, eBay, Amazon and CNN.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-slide>
+
+    <ion-slide id="slide4" class="pc-decision ">
+      <!-- <div class="scene"> -->
+      <ion-card
+        #swipecard
+        class="scene animated heartBeat infinite delay-5s slower"
+      >
+        <div class="cardd" #cardref [class.is-flipped]="status">
+          <div class="card__face--front">
+            <ion-card-header>
+              <ion-card-title>
+                It's Time now for you to make a Decision..
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="ion-btn">
+                <ion-button fill="outline" shape="round" (click)="onTap()"
+                  >More Info</ion-button
+                >
+                <ion-button
+                  fill="outline"
+                  shape="round"
+                  [disabled]="button_status !== 'pc'"
+                  (click)="onDecision()"
+                  >I AM READY!</ion-button
+                >
+              </div>
+            </ion-card-content>
+          </div>
+          <div class="card__face--back">
+            <ion-card-header>
+              <ion-card-title>
+                More Info
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="ion-btn">
+                <p>
+                  <b>Windows</b> is User Friendly Machine extensively used
+                  throughout the world with multiple functionalities!
+                </p>
+                <p>
+                  <b>Kali Linux</b> is a Debian distribution of the the famous
+                  Linux Operating System. It is not very user friendly and can
+                  be unintuitive!
+                </p>
+                <p>The rest is upto You!</p>
+                <ion-button fill="outline" shape="round" (click)="onTap()"
+                  >Okay</ion-button
+                >
+                <!-- <ion-button fill="outline" shape="round" (click)="onDecision()">I AM READY!</ion-button> -->
+              </div>
+            </ion-card-content>
+          </div>
+        </div>
+      </ion-card>
+      <!-- </div> -->
+    </ion-slide>
+
+    <ion-slide id="slide5" class="windows">
+      <ion-img [src]="'../../assets/img/cybersecurity_3.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide6" class="learningscreens">
+      <ion-card>
+        <ion-header>
+          <ion-toolbar>
+            <ion-card-title>
+              Claim Knowledge
+            </ion-card-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-card-content>
+          The Internet is extremely vulnerable to attacks, and one of the
+          biggest issues is malware, which is malicious software that enters a
+          computer system without the user’s knowledge or consent. Their main
+          goals are to infect, conceal and mainly profit. They can be created by
+          individual people, or even governments for cyber warfare.
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide id="slide7" class="learningscreens">
+      <ion-card>
+        <ion-header>
+          <ion-toolbar>
+            <ion-card-title>
+              Claim Knowledge
+            </ion-card-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-card-content>
+          You’ve probably heard of the most common types of malcode, the one and
+          only Virus. It is a self-replicating code, and much like a biological
+          virus cannot live without attaching itself to a file, email or media.
+          Then we’ve got the worm, and as slimy as it sounds, it is also
+          self-replicating and travels over a network without a host program!
+          Another one of the newcomers to the scene is the ransomware, they
+          basically kidnap your system software by means of encryption and ask
+          you for money for its safe release.
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide id="slide8" class="learningscreens">
+      <ion-card>
+        <ion-header>
+          <ion-toolbar>
+            <ion-card-title>
+              Claim Knowledge
+            </ion-card-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-card-content>
+          This sounds absolutely terrible doesn’t it Donald? How can we possibly
+          protect our games, pictures and documents from these evil people?
+          Luckily its not just viruses that have evolved, our antivirus software
+          has been getting better too! But all the antivirus in the world cannot
+          save you if you open that suspicious email or download link offering
+          you free fame and fortune. Some of the most prominent guys involve
+          McAfee, Symantec, Sophos, Kaspersky, Norton and TrendMicro.
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide id="slide9">
+      <ion-img [src]="'../../assets/img/cybersecurity_4.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide10" class="pc-decision">
+      <!-- <div class="scene"> -->
+      <ion-card class="scene animated heartBeat infinite delay-5s slower">
+        <div class="cardd" [class.is-flipped]="status">
+          <div class="card__face--front">
+            <ion-card-header>
+              <ion-card-title>
+                It's Time now for you to make a Decision..
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="ion-btn">
+                <ion-button fill="outline" shape="round" (click)="onTap()"
+                  >More Info</ion-button
+                >
+                <ion-button
+                  fill="outline"
+                  shape="round"
+                  [disabled]="button_status !== 'keygen'"
+                  (click)="onKeygen()"
+                  >I AM READY!</ion-button
+                >
+              </div>
+            </ion-card-content>
+          </div>
+          <div class="card__face--back">
+            <ion-card-header>
+              <ion-card-title>
+                More Info
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="ion-btn">
+                <p>
+                  Okay, so our dear security friend seems to have been planning
+                  this for a while. He deleted our antivirus software and seems
+                  to have left us wide open. Let me call an IT person for
+                  purchasing a new subscription. In the meantime, see what you
+                  can do.
+                </p>
+                <ion-button fill="outline" shape="round" (click)="onTap()"
+                  >Okay</ion-button
+                >
+                <!-- <ion-button fill="outline" shape="round" (click)="onDecision()">I AM READY!</ion-button> -->
+              </div>
+            </ion-card-content>
+          </div>
+        </div>
+      </ion-card>
+      <!-- </div> -->
+    </ion-slide>
+
+    <ion-slide id="slide11">
+      <ion-img [src]="'../../assets/img/cybersecurity_7.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide12">
+      <ion-img [src]="'../../assets/img/cybersecurity_8.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide13">
+      <ion-img [src]="'../../assets/img/cybersecurity_9.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide14">
+      <ion-img [src]="'../../assets/img/cybersecurity_10.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide15">
+      <ion-img [src]="'../../assets/img/cybersecurity_11.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide16" class="learningscreens">
+      <ion-card>
+        <ion-header>
+          <ion-toolbar>
+            <ion-card-title>
+              Claim Knowledge
+            </ion-card-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-card-content>
+          Authentication is basically “Who goes there?”, and the most common
+          type of credential is the “something you know” which is passwords. But
+          much like how passwords conceal themselves as you type on forms,
+          systems also obscure plain-text passwords. This is done by a process
+          called hashing, which is repeatable, but irreversible.
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide id="slide17">
+      <ion-img [src]="'../../assets/img/cybersecurity_12.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide18">
+      <ion-img [src]="'../../assets/img/cybersecurity_13.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide19" class="learningscreens">
+      <ion-card>
+        <ion-header>
+          <ion-toolbar>
+            <ion-card-title>
+              Claim Knowledge
+            </ion-card-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-card-content>
+          Hm..what is that? Oh no it’s obviously not a color thing, rainbow
+          tables are brute-forced pre-computed hashes for all combinations of
+          words upto different lengths. The table is gigantic but all you have
+          to do now is set up a script to go through the table and try out each
+          option. I believe most people use password lengths of 8, so let’s go
+          ahead with that assumption.
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide id="slide20">
+      <ion-img [src]="'../../assets/img/cybersecurity_14.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide21" class="pc-decision">
+      <!-- <div class="scene"> -->
+      <ion-card class="scene animated heartBeat infinite delay-5s slower">
+        <div class="cardd" [class.is-flipped]="status">
+          <div class="card__face--front">
+            <ion-card-header>
+              <ion-card-title>
+                It's Time now for a little review..
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="ion-btn">
+                <ion-button fill="outline" shape="round" (click)="onTap()"
+                  >More Info</ion-button
+                >
+                <ion-button
+                  fill="outline"
+                  shape="round"
+                  [disabled]="button_status !== 'windows_quiz'"
+                  (click)="onWinQuiz()"
+                  >I AM READY!</ion-button
+                >
+              </div>
+            </ion-card-content>
+          </div>
+          <div class="card__face--back">
+            <ion-card-header>
+              <ion-card-title>
+                More Info
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="ion-btn">
+                <p>
+                  This is a short quiz that will help you review main takeaways
+                  from your journey so far.
+                </p>
+                <ion-button fill="outline" shape="round" (click)="onTap()"
+                  >Okay</ion-button
+                >
+                <!-- <ion-button fill="outline" shape="round" (click)="onDecision()">I AM READY!</ion-button> -->
+              </div>
+            </ion-card-content>
+          </div>
+        </div>
+      </ion-card>
+      <!-- </div> -->
+    </ion-slide>
+
+    <ion-slide id="slide22">
+      <ion-img [src]="'../../assets/img/cybersecurity_15.JPG'"></ion-img>
+    </ion-slide>
+
+    <!-- Kali Slides -->
+
+    <ion-slide id="slide23" class="kali">
+      <ion-img [src]="'../../assets/img/cybersecurity_16.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide24" class="kali">
+      <ion-img [src]="'../../assets/img/cybersecurity_17.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide25" class="pc-decision">
+      <!-- <div class="scene"> -->
+      <ion-card class="scene animated heartBeat infinite delay-5s slower">
+        <div class="cardd" [class.is-flipped]="status">
+          <div class="card__face--front">
+            <ion-card-header>
+              <ion-card-title>
+                It's Time for you to make a decision..
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="ion-btn">
+                <ion-button fill="outline" shape="round" (click)="onTap()"
+                  >More Info</ion-button
+                >
+                <ion-button
+                  fill="outline"
+                  shape="round"
+                  [disabled]="button_status !== 'bagiz'"
+                  (click)="onBagiz()"
+                  >I AM READY!</ion-button
+                >
+              </div>
+            </ion-card-content>
+          </div>
+          <div class="card__face--back">
+            <ion-card-header>
+              <ion-card-title>
+                More Info
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="ion-btn">
+                <p>
+                  Profile the entity Bagiz in two ways: Active vs Passive This
+                  decision will be significant in the quest to defeat the
+                  hackers!
+                </p>
+                <ion-button fill="outline" shape="round" (click)="onTap()"
+                  >Okay</ion-button
+                >
+                <!-- <ion-button fill="outline" shape="round" (click)="onDecision()">I AM READY!</ion-button> -->
+              </div>
+            </ion-card-content>
+          </div>
+        </div>
+      </ion-card>
+      <!-- </div> -->
+    </ion-slide>
+
+    <ion-slide id="slide26" class="learningscreens">
+      <ion-card>
+        <ion-header>
+          <ion-toolbar>
+            <ion-card-title>
+              Claim Knowledge
+            </ion-card-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-card-content>
+          You start by doing the basics, we need to know what their IP address
+          is, are they listed anywhere. IP address is the logical address that
+          any device on the internet has, it is how computers are identifying
+          amongst each other. After all, you can’t write a letter to a person
+          whose address you don’t know.
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide id="slide27" class="kali">
+      <ion-img [src]="'../../assets/img/cybersecurity_18.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide28" class="kali">
+      <ion-img [src]="'../../assets/img/cybersecurity_19.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide29" class="kali">
+      <ion-img [src]="'../../assets/img/cybersecurity_20.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide30" class="kali">
+      <ion-img [src]="'../../assets/img/cybersecurity_21.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide31" class="learningscreens">
+      <ion-card>
+        <ion-header>
+          <ion-toolbar>
+            <ion-card-title>
+              Claim Knowledge
+            </ion-card-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-card-content>
+          Denial of service attacks render a victim system unusable or
+          significantly slow down the system for legitimate users by overloading
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide id="slide32" class="kali">
+      <ion-img [src]="'../../assets/img/cybersecurity_22.JPG'"></ion-img>
+    </ion-slide>
+
+    <ion-slide id="slide33" class="pc-decision">
+      <!-- <div class="scene"> -->
+      <ion-card class="scene animated heartBeat infinite delay-5s slower">
+        <div class="cardd" [class.is-flipped]="status">
+          <div class="card__face--front">
+            <ion-card-header>
+              <ion-card-title>
+                It's Time now for a little review..
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="ion-btn">
+                <ion-button fill="outline" shape="round" (click)="onTap()"
+                  >More Info</ion-button
+                >
+                <ion-button
+                  fill="outline"
+                  shape="round"
+                  [disabled]="button_status !== 'kali_quiz'"
+                  (click)="onKaliQuiz()"
+                  >I AM READY!</ion-button
+                >
+              </div>
+            </ion-card-content>
+          </div>
+          <div class="card__face--back">
+            <ion-card-header>
+              <ion-card-title>
+                More Info
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="ion-btn">
+                <p>
+                  This is a short quiz that will help you review main takeaways
+                  from your journey using Kali so far..
+                </p>
+                <ion-button fill="outline" shape="round" (click)="onTap()"
+                  >Okay</ion-button
+                >
+                <!-- <ion-button fill="outline" shape="round" (click)="onDecision()">I AM READY!</ion-button> -->
+              </div>
+            </ion-card-content>
+          </div>
+        </div>
+      </ion-card>
+      <!-- </div> -->
+    </ion-slide>
+
+    <ion-slide id="slide34" class="kali">
+      <ion-img [src]="'../../assets/img/cybersecurity_23.JPG'"></ion-img>
+    </ion-slide>
+  </ion-slides>
+  
+
+
+</ion-content>

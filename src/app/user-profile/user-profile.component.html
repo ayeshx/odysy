@@ -1,0 +1,192 @@
+<!-- <ion-header>
+
+</ion-header> -->
+
+
+<ion-content id="main-content">
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="profile" layout="icon-end">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="progress" layout="icon-end">
+      <ion-icon name="walk"></ion-icon>
+      <ion-label>Progress</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="timeline" layout="icon-end">
+      <ion-icon name="reader-outline"></ion-icon>
+      <ion-label>Career/Jobs</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div id="profile" *ngIf="seg == 0">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="1">
+          <ion-avatar>
+            <img [src]="user.imageUrl">
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="3">
+          <h2> {{user.name}} </h2>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="3">
+          <ion-button (click)="onManualUpdate()" mode="ios" size="small" strong shape="round" fill="outline">
+            Look for Job Updates!
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item-divider></ion-item-divider>
+        </ion-col>
+
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="5">
+          <ion-list>
+            <ion-list-header mode="ios">Settings</ion-list-header>
+            <ion-item>
+              <ion-label>Reset Progress</ion-label>
+              <ion-icon name="refresh-outline" slot="start"></ion-icon>
+            </ion-item>
+            <ion-item>
+              <ion-label>About</ion-label>
+              <ion-icon name="information-circle-outline" slot="start"></ion-icon>
+            </ion-item>
+            <ion-item>
+              <ion-label>Auto Job Updates</ion-label>
+              <ion-icon name="arrow-up-outline" slot="end"></ion-icon>
+              <ion-toggle [(ngModel)]="job_updates" (ionChange)="toggleChange()" mode="ios" slot="start" checked></ion-toggle>
+            </ion-item>
+            <ion-item (click)="onEditProfile()">
+              <ion-label>Add/Edit Resume</ion-label>
+              <ion-icon name="create-outline" slot="start"></ion-icon>
+            </ion-item>
+            <ion-item>
+              <ion-label color="danger">Logout</ion-label>
+              <ion-icon color="danger" name="log-out-outline"  slot="start"></ion-icon>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <!-- <form (ngSubmit)="onSubmitForm()" > 
+      <ion-item>
+        <ion-label>Choose CV</ion-label>
+        <ion-input type="file" (change)="changeListener($event)" ></ion-input>
+        <ion-button type="submit">Let's Go</ion-button>
+      </ion-item>
+    </form> -->
+  </div>
+
+  <div *ngIf="seg == 1">
+    <p-chart type="doughnut" [data]="data"></p-chart>
+    <!-- <p-menu [model]="items"></p-menu> -->
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="3">
+          <ul class="clr-timeline clr-timeline-vertical">
+            <li class="clr-timeline-step">
+              <div class="clr-timeline-step-header">11:59 am</div>
+              <clr-icon shape="success-standard" aria-label="Not started"></clr-icon>
+              <div class="clr-timeline-step-body">
+                <span class="clr-timeline-step-title">Body Title</span>
+                <span class="clr-timeline-step-description">Body Description.</span>
+              </div>
+            </li>
+            <li class="clr-timeline-step">
+              <div class="clr-timeline-step-header">11:59 am</div>
+              <clr-icon shape="success-standard" aria-label="Not started"></clr-icon>
+              <div class="clr-timeline-step-body">
+                <span class="clr-timeline-step-title">Body Title</span>
+                <span class="clr-timeline-step-description">Body Description.</span>
+              </div>
+            </li>
+            <li class="clr-timeline-step">
+              <div class="clr-timeline-step-header">11:59 am</div>
+              <clr-icon shape="circle" aria-label="Not started"></clr-icon>
+              <div class="clr-timeline-step-body">
+                <span class="clr-timeline-step-title">Body Title</span>
+                <span class="clr-timeline-step-description">Body Description.</span>
+              </div>
+            </li>
+            <li class="clr-timeline-step">
+              <div class="clr-timeline-step-header">11:59 am</div>
+              <clr-icon shape="dot-circle" aria-label="Not started"></clr-icon>
+              <div class="clr-timeline-step-body">
+                <span class="clr-timeline-step-title">Body Title</span>
+                <span class="clr-timeline-step-description">Body Description.</span>
+              </div>
+            </li>
+            <li class="clr-timeline-step">
+              <div class="clr-timeline-step-header">11:59 am</div>
+              <!-- <clr-icon shape="spinner" aria-label="Not started"></clr-icon> -->
+              <clr-spinner clrMedium aria-label="In progress">Fetching data</clr-spinner>
+              <div class="clr-timeline-step-body">
+                <span class="clr-timeline-step-title">Body Title</span>
+                <span class="clr-timeline-step-description">Body Description.</span>
+              </div>
+            </li>
+          </ul>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="seg == 2" class="timeline">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="5" > <h1>Recommended Jobs and Career Advices</h1> </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8"> <h2>Recommended Tracks</h2> </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card *ngFor="let track of user_updates.track_recos" >
+            <ion-card-header>Track Details</ion-card-header>
+            <ion-card-content>
+              {{track.description}}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8"> <h2>Education Opportunities</h2> </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card *ngFor="let edu of user_updates.education_opp" >
+            <ion-card-header>{{edu.type}}</ion-card-header>
+            <ion-card-content>
+              {{edu.description}}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8"> <h2>Latest Job Postings</h2> </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card *ngFor="let job of updates" >
+            <ion-card-header>{{job.field.toUpperCase()}}</ion-card-header>
+            <ion-card-subtitle>{{job.link}}</ion-card-subtitle>
+            <ion-card-content>
+              {{job.description}}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+</ion-content>

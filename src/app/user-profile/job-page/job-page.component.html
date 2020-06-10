@@ -1,0 +1,36 @@
+<p *ngIf="!edit">
+  job-page works!
+</p>
+
+<p *ngIf="edit">
+  <ion-card>
+    <ion-card-header>Add/Edit your Resume</ion-card-header>
+    <ion-card-content>
+      <form (ngSubmit)="onSubmit()">
+        <ion-item>
+          <ion-label position="floating">Past/Current Education (if applicable):</ion-label>
+          <ion-input type="text" name="education" [(ngModel)]="education" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label  position="floating">Previous Experiences</ion-label>
+          <ion-input type="text" name="experience" [(ngModel)]="experience" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label  position="floating">Select Interest Fields</ion-label>
+          <ion-select multiple="true" cancelText="Nah!" okText="Done!" name="interests" [(ngModel)]="interests">
+              <ion-select-option value="machine learning">Machine Learning</ion-select-option>
+              <ion-select-option value="iot">IoT</ion-select-option>
+              <ion-select-option value="music">Music</ion-select-option>
+              <ion-select-option value="cybersecurity">Cyber Security</ion-select-option>
+              <ion-select-option value="business">Business</ion-select-option>
+              <ion-select-option value="communication">Mass Communication</ion-select-option>
+              <ion-select-option value="cs">Computer Science</ion-select-option>
+              <ion-select-option value="arts">Arts</ion-select-option>
+              <ion-select-option value="social sciences">Social Sciences</ion-select-option>
+          </ion-select>>
+        </ion-item>
+        <ion-button type="submit" >Update Resume</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>>
+</p>

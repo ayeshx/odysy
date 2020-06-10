@@ -1,0 +1,65 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-slides pager="true" [options]="slideOpts">
+          <ion-slide class="slide">
+            <img src="../../assets/img/landing2.jpg" alt="" />
+            <h2>You've now reached AdAstra</h2>
+            <p>
+              Congratulations on taking the time to explore the world and it's
+              many challenges!
+            </p>
+          </ion-slide>
+          <ion-slide class="slide">
+            <img src="../../assets/img/landing5.jpg" alt="" />
+            <h2>Your journey has just begun..</h2>
+            <p>
+              We guarantee you a long and enlightening journey to wherever you
+              want to go, whoever you want to be and whatever you want to do in
+              life!
+            </p>
+          </ion-slide>
+          <ion-slide class="slide">
+            <img src="../../assets/img/landing4.jpg" alt="" />
+            <h2>Explore the World</h2>
+            <p>
+              Make your way through various regions in the world, at the end of
+              the day it is YOUR journey!
+            </p>
+          </ion-slide>
+          <ion-slide class="slide">
+            <img src="../../assets/img/landing3.jpg" alt="" />
+            <h2>Diverse, Real World Challenges!</h2>
+            <p>
+              Real issues, real experiences, real challenges all carefully put
+              together for you to solve and learn from.
+            </p>
+          </ion-slide>
+          <ion-slide class="slide">
+            <img src="../../assets/img/landing6.jpg" alt="" />
+            <h2>Ready To Take Off?</h2>
+            <p>
+              Improve your knowledge of various fields, add this to what you
+              learn in school to get a holistic view of what every field can
+              offer you.
+            </p>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button
+          class="login-button"
+          (click)="onBeginJournery()"
+          expand="full"
+          fill="solid"
+          color="primary"
+        >
+          Begin
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

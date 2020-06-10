@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Now, Let's start with who you are!</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding-top">
+  <h4>Choose any 2 which describe you best..</h4>
+  <ion-grid>
+    <ion-row>
+      <ion-col >
+        <ion-chip [class.stylee]="chipcolor1" (click)="onClick1()" class="ion-float-right">
+          <ion-label>Ambitious</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col >
+        <ion-chip [class.stylee]="chipcolor2" (click)="onClick2()" class="ion-float-left">
+          <ion-label>Artistic</ion-label>
+        </ion-chip>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-chip [class.stylee]="chipcolor3" (click)="onClick3()" class="ion-float-right">
+          <ion-label>Opinionated</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col>
+        <ion-chip [class.stylee]="chipcolor4" (click)="onClick4()">
+          <ion-label>Environmental</ion-label>
+        </ion-chip>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-chip [class.stylee]="chipcolor5" (click)="onClick5()" class="ion-float-right">
+          <ion-label>Agreeableness</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col>
+        <ion-chip [class.stylee]="chipcolor6" (click)="onClick6()" class="ion-float-left">
+          <ion-label>Researcher</ion-label>
+        </ion-chip>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col size="7">
+        <ion-button class="ion-float-right">Proceed</ion-button>
+      </ion-col>
+    </ion-row> -->
+    <div>
+      <ion-button (click)="onProceed()" fill="outline" shape="round">Proceed</ion-button>
+    </div>
+
+  </ion-grid>
+
+
+</ion-content>

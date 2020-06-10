@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Page Title</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+
+
+  <ion-item *ngIf="user">
+    <ion-thumbnail slot="start">
+      <img [src]="user.picture.data.url" />
+    </ion-thumbnail>
+    <ion-label>
+      <h3>{{user.name}}</h3>
+    </ion-label>
+  </ion-item>
+
+
+  <ion-button (click)="BeginStory()" class="login-button" expand="full" fill="solid" color="danger">
+    Begin Story
+  </ion-button>
+
+
+</ion-content>
+

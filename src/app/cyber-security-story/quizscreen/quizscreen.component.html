@@ -1,0 +1,262 @@
+<ion-content id="mycontent">
+  <!-- <ion-slides
+    [hidden]="quiz_win"
+    [options]="opts"
+    #quizslides
+    pager="true"
+    (ionSlideTransitionEnd)="slideChange()"
+  >
+  
+    <ion-slide id="one"> -->
+
+      <div id="mycont">
+      <div [hidden]="quiz_kali">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              Submit when you are done!
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <!-- [disabled]="next2" -->
+                  <ion-button (click)="onAnswerKali2()" color="light"
+                    >Next</ion-button
+                  >
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              {{ title }}
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-label>
+                    Can you perform a port scan before a ping sweep?
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-toggle [(ngModel)]="port_scan"></ion-toggle>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <!-- <ion-button (click)="onAnswerKali()" color="light"
+                        >Next</ion-button
+                      > -->
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+        <!-- </ion-slide> -->
+    
+        <!-- <ion-slide> -->
+        <div class="quizscreen">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                Good Next Question..
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <ion-label>
+                      IP address is the physical address of a machine..
+                    </ion-label>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <ion-toggle [(ngModel)]="ip"></ion-toggle>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <!-- <ion-button [disabled]="button_status2" (click)="onAnswerKali()" color="light"
+                        >Next</ion-button
+                      > -->
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </div>
+        <!-- </ion-slide> -->
+    
+        <!-- <ion-slide> -->
+        <div class="quizscreen">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                And Last Question..
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <ion-label position="stacked">
+                      DOS attacks leave a system unlocked..
+                    </ion-label>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <ion-toggle [(ngModel)]="dos"></ion-toggle>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </div>
+
+  <div [hidden]="quiz_win">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Submit When you are done!
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-button (click)="onAnswer2()" color="light">Next</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          {{ title }}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- <ion-item>
+              <ion-label position="floating"
+                >What is a self replicating piece of code? Hint: Think
+                Biologically!
+              </ion-label>
+              <ion-input [(ngModel)] = "answer1"></ion-input>
+              <ion-button (click)="onAnswer()" color="light">Next</ion-button>
+            </ion-item> -->
+        <ion-reorder-group
+          (ionItemReorder)="doReorder($event)"
+          disabled="false"
+        >
+          <ion-item>
+            <ion-label>
+              {{ items[0] }}
+            </ion-label>
+            <ion-reorder slot="end"></ion-reorder>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>
+              {{ items[1] }}
+            </ion-label>
+            <ion-reorder slot="end"></ion-reorder>
+          </ion-item>
+          <ion-item>
+            <ion-reorder slot="end"></ion-reorder>
+            <ion-label>
+              {{ items[2] }}
+            </ion-label>
+          </ion-item>
+        </ion-reorder-group>
+      </ion-card-content>
+    </ion-card>
+    <!-- </ion-slide>
+
+    <ion-slide> -->
+    <div class="quizscreen">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            {{ title }}
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-label>
+                  Hashing is done to protect usernames..
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-toggle [(ngModel)]="username"></ion-toggle>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <!-- </ion-slide>
+
+    <ion-slide> -->
+    <div class="quizscreen">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            {{ title }}
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-label position="stacked">
+                  Rainbow tables have the trade off of less space but more time?
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-toggle [(ngModel)]="hashing"></ion-toggle>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <!-- </ion-slide> -->
+  <!-- </ion-slides> -->
+
+  <!-- <ion-slides [hidden]="quiz_kali"  [options]="opts" #quizslides2 pager="true" (ionSlideDidChange)="slideChange2()"> -->
+  <!-- <ion-slide id="one"> -->
+  
+  <!-- </ion-slide> -->
+  <!-- </ion-slides> -->
+
+  <div [hidden]="displayAchievement" class="achievement-container" #container>
+    <div class="medal" #badge>
+      <img src="../../../assets/img/shaded_medal1.png" />
+    </div>
+
+    <div class="message" #message>
+      <h5>Tutorial Completed</h5>
+    </div>
+  </div>
+</div>
+</ion-content>

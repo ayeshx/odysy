@@ -1,0 +1,29 @@
+ion-toolbar {
+    --background: lightseagreen;
+    --border-style: groove;
+    --border-color: black;
+    --border-width: 2px;
+    text-align: center;
+    --color: white;
+    box-shadow: 10px 10px 8px #888888;
+} 
+h4 {
+    text-align: center;
+}
+
+.stylee {
+    background-color: lightseagreen;
+    color: white;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-button {
+    width: 50%;
+    --border-color: lightseagreen;
+    --color: lightseagreen;
+}

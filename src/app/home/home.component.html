@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button> </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Welcome Player
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content >
+  <ion-grid>
+    <ion-row class="ion-align-items-stretch">
+      <ion-col size="6">
+        <div>
+          <ion-card (click)="onQuest()" [class.card-loaded]="cardLoaded">
+            <ion-slides [options]="opts" #slides>
+              <ion-slide>
+                <ion-img
+                  [src]="'../../assets/img/Cybersecurity_1.PNG'"
+                ></ion-img>
+              </ion-slide>
+              <ion-slide>
+                <ion-img [src]="'../../assets/img/speech_cover.PNG'"></ion-img>
+              </ion-slide>
+              <ion-slide>
+                <ion-img [src]="'../../assets/img/1_IoT_Intro.gif'"></ion-img>
+              </ion-slide>
+            </ion-slides>
+            <ion-card-header>
+              <ion-card-subtitle>The World is waiting</ion-card-subtitle>
+              <ion-card-title>Continue quests!</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-card [class.card-loaded]="cardLoaded">
+            <ion-img src="../../assets/img/medal.jpg"></ion-img>
+            <ion-card-header>
+              <ion-card-subtitle>View your conquests!</ion-card-subtitle>
+              <ion-card-title>Trophy Room</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="8">
+        <h3>Become Yourself</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
+          consectetur purus ut faucibus pulvinar. Purus sit amet luctus
+          venenatis lectus magna fringilla urna porttitor. Neque ornare aenean
+          euismod elementum nisi. Fermentum et sollicitudin ac orci phasellus
+          egestas tellus. Sociis natoque penatibus et magnis dis parturient.
+          Molestie nunc non blandit massa enim. Pellentesque elit eget gravida
+          cum sociis. Mauris ultrices eros in cursus turpis massa tincidunt dui
+          ut. Ut tortor pretium viverra suspendisse potenti nullam ac. Turpis in
+          eu mi bibendum neque egestas. Blandit massa enim nec dui nunc mattis
+          enim ut tellus. Sit amet consectetur adipiscing elit duis tristique
+          sollicitudin. Libero id faucibus nisl tincidunt. Ut porttitor leo a
+          diam sollicitudin tempor id eu. Pharetra diam sit amet nisl suscipit
+          adipiscing bibendum est. Mauris rhoncus aenean vel elit scelerisque
+          mauris pellentesque. Et molestie ac feugiat sed lectus vestibulum
+          mattis ullamcorper. Sit amet dictum sit amet justo donec enim diam
+          vulputate.
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

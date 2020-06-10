@@ -1,0 +1,36 @@
+<ion-content>
+  <div #swipecard>
+<ion-card >
+  <ion-card-header>
+    <ion-card-title>
+      {{title}}
+    </ion-card-title>
+    <ion-card-subtitle>
+      {{subtitle}}
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div #Windows>
+          <ion-thumbnail>
+            <img [src]="first_choice_img">
+          </ion-thumbnail>
+        </div>
+        </ion-col>
+        <ion-col>
+          <div #Kali>
+          <ion-thumbnail>
+            <img [src]="second_choice_img" alt="">
+          </ion-thumbnail>
+        </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  </ion-card-content>
+</ion-card>
+</div>
+</ion-content>

@@ -1,0 +1,67 @@
+ion-img{    
+        
+    background-size: cover;
+    // background-repeat: no-repeat;
+    height: 75%;
+    width: 75%;
+    display: block;
+    // object-fit: cover;
+}
+.swiper-slide {
+background-image: linear-gradient(darkblue, white);
+}
+
+div {
+    // padding-top: 0;
+    background-size: cover;
+    // background-repeat: no-repeat;
+    height: 75%;
+    width: 75%;
+    display: block;
+}
+
+#slide13_0{
+    background-image: url('../../assets/img/IoT_Assess.jpeg'),linear-gradient(darkblue, white);
+    background-size: 80% 100%, 100% 100%;
+    background-position: center, center;
+    background-repeat:  no-repeat, no-repeat;
+}
+
+ion-checkbox {
+    --background: inherit;
+}
+ion-list {
+    background: inherit;
+}
+ion-item {
+    --background: none;
+    // background: inherit;
+    // opacity: 1;
+    // ion-label {
+    //     opacity: 1;
+    // }
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+ion-card {
+    transform: scale(0.7);
+    text-align: center;
+    color: white;
+    background: rgba($color: white, $alpha: 0.6);
+    // border-color: red;
+    border: 2px solid black;
+    ion-card-title {
+        color: white;
+    }
+    float:50%;
+    // background-size: cover;
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+}
+
+// #slide13_0 {
+//     background-image: url('../../assets/img/IoT_Assess.jpeg');
+//     background-size: ;
+// }

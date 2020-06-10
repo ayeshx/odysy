@@ -1,0 +1,28 @@
+
+
+ion-thumbnail {
+    display: inline;
+    // border-style: solid;
+}
+
+ion-col {
+    border: 2px solid white;
+}
+
+ion-content {
+    --background: none;
+    transform: rotateZ(0);
+    -webkit-transform: rotateZ(0);
+    background: url('../../../assets/img/testbackground.gif');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+ion-card {
+    text-align: center;
+    color: white;
+    background: inherit;
+    // background-attachment: fixed;
+}
+

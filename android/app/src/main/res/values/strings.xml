@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">
+		astra-app
+	</string>
+	<string name="title_activity_main">
+		astra-app
+	</string>
+	<string name="package_name">
+		io.ionic.starter
+	</string>
+	<string name="custom_url_scheme">
+		io.ionic.starter
+	</string>
+	<string name="facebook_app_id">
+		284522799204486
+	</string>
+	<string name="fb_login_protocol_scheme">
+		fb284522799204486
+	</string>
+	<string name="server_client_id">
+		1004911344496-jf6m684ni0k1i191dj3hppdderehb2ee.apps.googleusercontent.com
+	</string>
+</resources>

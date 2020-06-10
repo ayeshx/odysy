@@ -1,0 +1,39 @@
+ion-toolbar {
+    --background: lightseagreen;
+    --border-style: groove;
+    --border-color: black;
+    --border-width: 2px;
+    text-align: center;
+    --color: white;
+    box-shadow: 10px 10px 8px #888888;
+} 
+ion-title {
+    font-weight: bold;
+}
+div {
+    // border: 2px solid green;
+    height: 100%;
+}
+ion-card {
+    height: 95%;
+    border-radius: 24px;
+    
+}
+.card-loaded {
+    border: 1px ridge lightseagreen;
+}
+h3 {
+    border-bottom: 2px solid lightseagreen;
+    padding-bottom: 5px;
+}
+h4 {
+    color: lightseagreen;
+    font-weight: bolder;
+}
+// ion-row {
+//     border: 2px solid red;
+// }
+// ion-col {
+//     border: 2px solid blue;
+//     // align-items: stretch;
+// }

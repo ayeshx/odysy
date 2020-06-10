@@ -1,0 +1,175 @@
+<ion-content fullscreen scroll-y="false">
+  <!-- <div style="width:100%; height:100%; display:block; background: url('../../assets/img/cybersecurity_3.JPG'); background-size: cover; opacity: 0; position: absolute;"  id="divtwo" #divtwo>
+    <h1>DivTwo</h1>
+  </div>
+
+  <div style="width:100%; height:100%; display: block; background: url('../../assets/img/cybersecurity_1.JPG'); background-size: cover; opacity: 1; position: absolute; "  id="divone" #divone>
+    <h1>DIVONE</h1>
+  </div> -->
+  
+  <ion-slides
+    (ionSlideTransitionEnd)="slideChange()"
+    #slide
+    [options]="slideOpts"
+  >
+    <ion-slide class="slide0">
+      <ion-img [src]="'../../assets/img/speech_cover.PNG'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide1">
+      <ion-img [src]="'../../assets/img/speech_1_noloop.gif'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide2">
+      <ion-img [src]="'../../assets/img/speech_2_noloop.gif'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide3">
+      <ion-img [src]="'../../assets/img/speech_3_noloop.gif'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide4_0">
+      <ion-img [src]="'../../assets/img/speech_4_noloop.gif'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide5_1">
+      <ion-img [src]="'../../assets/img/speech_5_noloop.gif'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide6_2">
+      <ion-img [src]="'../../assets/img/speech_6_noloop.gif'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide7_3">
+      <ion-img [src]="'../../assets/img/speech_7_noloop.gif'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide8_0">
+      <ion-img [src]="'../../assets/img/speech_8_noloop.gif'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide10_1">
+      <ion-img [src]="'../../assets/img/speech_10_noloop.gif'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide11_2">
+      <ion-img [src]="'../../assets/img/speech_11_noloop.gif'"></ion-img>
+      <ion-fab horizontal="end" vertical="center" slot="fixed">
+        <ion-fab-button color="light" class="animated rubberBand infinite">
+          <ion-icon name="help"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+          <ion-fab-button (click)="onChoice('opening',2)" >
+            <strong>2</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="bottom">
+          <ion-fab-button (click)="onChoice('opening',3)">
+            <strong>3</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="start">
+          <ion-fab-button (click)="onChoice('opening',1)">
+            <strong>1</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-slide>
+    <ion-slide id="slide12_3">
+      <ion-img [src]="'../../assets/img/speech_12_noloop.gif'"></ion-img>
+            <ion-fab horizontal="end" vertical="center" slot="fixed">
+        <ion-fab-button color="light" class="animated jello infinite">
+          <ion-icon name="help"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+          <ion-fab-button (click)="onChoice('premise',2)">
+            <strong>2</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="bottom">
+          <ion-fab-button (click)="onChoice('premise',3)">
+            <strong>3</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="start">
+          <ion-fab-button (click)="onChoice('premise',1)">
+            <strong>1</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-slide>
+    <ion-slide id="slide13_4">
+      <ion-img [src]="'../../assets/img/speech_13_noloop.gif'"></ion-img>
+            <ion-fab horizontal="end" vertical="center" slot="fixed">
+        <ion-fab-button color="light" class="animated wobble infinite">
+          <ion-icon name="help"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+          <ion-fab-button (click)="onChoice('body',2)">
+            <strong>2</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="bottom">
+          <ion-fab-button (click)="onChoice('body',3)">
+            <strong>3</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="start">
+          <ion-fab-button (click)="onChoice('body',1)">
+            <strong>1</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-slide>
+    <ion-slide id="slide14_5">
+      <ion-img [src]="'../../assets/img/speech_14_noloop.gif'"></ion-img>
+            <ion-fab horizontal="end" vertical="center" slot="fixed">
+        <ion-fab-button color="light" class="animated bounce infinite">
+          <ion-icon name="help"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+          <ion-fab-button (click)="onChoice('callforaction',2)">
+            <strong>2</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="bottom">
+          <ion-fab-button (click)="onChoice('callforaction',3)">
+            <strong>3</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="start">
+          <ion-fab-button (click)="onChoice('callforaction',1)">
+            <strong>1</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-slide>
+    <ion-slide id="slide15_6">
+      <ion-img [src]="'../../assets/img/speech_15_noloop.gif'"></ion-img>
+            <ion-fab horizontal="end" vertical="center" slot="fixed">
+        <ion-fab-button color="light" class="animated swing infinite">
+          <ion-icon name="help"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+          <ion-fab-button (click)="onChoice('close',2)">
+            <strong>2</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="bottom">
+          <ion-fab-button (click)="onChoice('close',3)">
+            <strong>3</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="start">
+          <ion-fab-button (click)="onChoice('close',1)">
+            <strong>1</strong>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-slide>
+    <ion-slide id="slide16_0">
+      <ion-img [src]="'../../assets/img/speech_16_noloop.gif'"></ion-img>
+    </ion-slide>
+    <ion-slide id="slide17_1">
+      <ion-img [src]="'../../assets/img/speech_17_noloop.gif'"></ion-img>
+
+    </ion-slide>
+    <ion-slide id="slide18_2">
+      <ion-img [src]="'../../assets/img/speech_18_noloop.gif'"></ion-img>
+    </ion-slide>
+
+    
+  </ion-slides>
+  
+
+</ion-content>

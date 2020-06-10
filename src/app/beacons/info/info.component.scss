@@ -1,0 +1,16 @@
+div {
+    // padding-top: 0;
+    ion-img{    
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        display: block;
+        // object-fit: cover;
+    }
+    background-size: cover;
+    // background-repeat: no-repeat;
+    background-image: linear-gradient(darkblue, white);
+    height: 100%;
+    width: 100%;
+    display: block;
+}
